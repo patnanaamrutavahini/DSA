@@ -1,0 +1,23 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    vector<vector<int>> mat = {{10, 20, 30},{40, 50, 60},{70, 80, 90}};
+
+    int rows = mat.size();
+    int cols = mat[0].size();
+    vector<vector<int>> ans(cols, vector<int>(rows));
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j < cols; j++) {
+            ans[j][i] = mat[i][j];
+        }
+    }
+    for (int i = 0; i < cols; i++) {
+        for (int j = 0; j < rows; j++) {
+            cout << ans[i][j] << " ";
+        }
+        cout << endl;
+    }
+    return 0;
+}
