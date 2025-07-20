@@ -1,0 +1,15 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{ 
+    int currnum=0;
+    int maxnum=0;
+    vector<int>arr={10,20,30,40,50};
+    int n=arr.size();
+    for(int i=0;i<n;i++){
+        currnum=arr[i];
+        maxnum=max(currnum,maxnum);
+    }
+    cout<< maxnum;
+}
