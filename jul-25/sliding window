@@ -1,0 +1,18 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main()
+{
+    vector<int> arr = {10, 20, 30, 40, 50};
+    int n = arr.size(), k = 3;
+    int left = 0, right = 0, wsum = 0;
+    while (right < n) {
+        wsum += arr[right];
+        if (right - left + 1 == k) {
+            cout << wsum << endl;
+            wsum -= arr[left];
+            left++;
+        }
+        right++;
+    }
+    return 0;
+}
