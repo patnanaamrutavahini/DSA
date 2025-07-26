@@ -1,0 +1,27 @@
+class Solution {
+  public:
+    int longestKSubstr(string &s, int k) {
+        // code here
+        int l=0,r=0,n=s.size(),discnt=0,maxlen=0;
+        vector<int>freq(26,0);
+        while(r<n){
+            if(freq[s[r]-'a']==0){
+                discnt++;
+            }
+            freq[s[r]-'a']++;
+            while(discnt>k){
+                freq[s[l]-'a']--;
+                if(freq[s[l]-'a']==0){
+                    discnt--;
+                }
+                l++;
+            }
+            if(discnt==k){
+                maxlen=max(maxlen,r-l+1);
+            }
+            r++;
+        }
+        if(maxlen==0) return -1;
+        else return maxlen;
+    }
+};
