@@ -1,0 +1,13 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int n=10;
+    int k=2;
+    int mask=1<<k;
+    if((n&mask)==0){
+        cout<<"bit is not set";
+    }
+    else cout<<"bit is set";
+   
+}
