@@ -1,0 +1,12 @@
+#include <iostream>
+using namespace std;
+int f(int x,int y){
+    if(x==0||y==0) return 0;
+    int aff=f(x,y-1);
+    return x+aff;
+}
+int main()
+{
+    int ans=f(5,3);
+    cout<<ans;
+}
