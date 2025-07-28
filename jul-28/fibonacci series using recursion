@@ -1,0 +1,13 @@
+#include <iostream>
+using namespace std;
+int f(int n){
+    if(n==0||n==1) return n;
+    int a=f(n-1);
+    int b=f(n-2);
+    return a+b;
+}
+int main()
+{
+    int ans=f(5);
+    cout<<ans;
+}
