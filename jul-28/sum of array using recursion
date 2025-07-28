@@ -1,0 +1,16 @@
+#include <bits/stdc++.h>
+using namespace std;
+int a(vector<int>& nums, int i){
+    if(i==nums.size()){
+        return 0;
+    }
+    int aff=a(nums, i+1);
+    return nums[i]+aff;
+    
+}
+int main()
+{
+    vector<int> nums={-10,10,20,30};
+    int ans=a(nums,0);
+    cout << ans;
+}
