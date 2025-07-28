@@ -1,0 +1,15 @@
+#include <bits/stdc++.h>
+using namespace std;
+vector<string>words={"zero","one","two","three","four","five","six","seven","eight","nine"};
+void sn(int n){
+    if(n==0){
+        return;
+    }
+    sn(n/10);
+    cout<<words[n%10]<<endl;
+    
+}
+int main()
+{
+    sn(10);
+}
