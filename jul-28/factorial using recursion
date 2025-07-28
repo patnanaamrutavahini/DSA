@@ -1,0 +1,12 @@
+#include <iostream>
+using namespace std;
+int f(int n){
+    if(n==0||n==1) return 1;
+    int aff=f(n-1);
+    return n*aff;
+}
+int main()
+{
+    int ans=f(5);
+    cout<<ans;
+}
