@@ -1,0 +1,57 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{  
+    stack<int>st;
+    int choice;
+    while(true){
+        cout<<"1. push\n";
+        cout<<"2. pop\n";
+        cout<<"3. top\n";
+        cout<<"4. display\n";
+        cout<<"5. exit";
+        cin>>choice;
+        if(choice==1){
+            int val;
+            cout<<" enter thr val";
+            cin>>val;
+            st.push(val);
+            cout<<val<<" is add to stack";
+        }
+        else if(choice==2){
+            if(!st.empty()){
+                cout<<st.top();
+                st.pop();
+            }
+            else{
+                cout<<"stack is empty";
+            }
+        }
+        else if(choice==3){
+            if(!st.empty()){
+                cout<<st.top();
+            }
+            else{
+                cout<<"stack is empty";
+            }
+        }
+        else if(choice==4){
+            if(!st.empty()){
+                cout<<st.top();
+                st.pop();
+            }
+            else{
+                cout<<"stack is empty";
+            }
+        }
+        else if(choice==5){
+            cout<<"exiting.....";
+            break;
+        }
+        else{
+            cout<<"invalid choice....";
+        }
+    }
+    return 0;
+}
