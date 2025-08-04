@@ -1,0 +1,55 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main()
+{
+    queue<int>q;
+    int choice;
+    while(true){
+        cout<<"1.enqueue";
+        cout<<"2.dequeue";
+        cout<<"3.front";
+        cout<<"4.dispaly";
+        cout<<"5.exit";
+        cin>>choice;
+        if(choice==1){
+            int val;
+            cout<<"enter value";
+            cin>>val;
+            q.push(val);
+        }
+        else if(choice==2){
+            if(!q.empty()){
+                cout<<q.front();
+                q.pop();
+            }
+            else{
+                cout<<"queue is empty";
+            }
+        }
+        else if(choice==3){
+            if(!q.empty()){
+                cout<<q.front();
+            }
+            else{
+                cout<<"queue is empty";
+            }
+        }
+        else if(choice==4){
+             if(!q.empty()){
+                cout<<q.front();
+                q.pop();
+            }
+            else{
+                cout<<"queue is empty";
+            }
+        }
+        else if(choice==5){
+            cout<<"exiting.....";
+            break;
+        }
+        else{
+            cout<<"invalid choice....";
+        }
+    }
+    return 0;
+}
