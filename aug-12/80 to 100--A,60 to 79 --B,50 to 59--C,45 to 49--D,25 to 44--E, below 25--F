@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int age;
+    cin>>age;
+    if(age>=80 && age<=100){
+        cout<<"A";
+    }
+    else if(age>=60&&age<=79){
+        cout<<"B";
+    }
+    else if(age>=50 && age<=59){
+        cout<<"C";
+    }
+    else if(age>=45 && age<=49){
+        cout<<"D";
+    }
+    else if(age>=25 && age<=44){
+        cout<<"E";
+    }
+    else{
+        cout<<"F";
+    }
+
+    return 0;
+}
